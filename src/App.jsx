@@ -9,16 +9,13 @@ const App = () => {
   //  console.log(data)
    }
   return (
-    <div className="p-2 w-full h-[60px] bg-red-500 justify-center flex">
+    <div className="p-2">
      <button onClick={getData} className="px-5 py-3  bg-green-500 rounded font-semibold">GetImage</button>
      
-      <div>
+      <div className='bg-zinc-950 p-4 rounded mt-5 flex flex-wrap'>
       {images.map(function(elem,idx) {
             return (
-             
-             <div className="p-2 flex ">
               <Images elem={elem} key={idx}/>
-              </div>
             )
           })}
       </div>
