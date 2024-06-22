@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import Images from './assets/components/Images'
 const App = () => {
   const [images,setImages]=useState([])
   const getData=async()=>{
@@ -14,8 +15,9 @@ const App = () => {
       <div>
       {images.map(function(elem,idx) {
             return (
-              <div className="p-2 flex ">
-                <img src={elem.download_url}key={idx} className="w-32 h-32 m-2 rounded"/>
+             
+             <div className="p-2 flex ">
+              <Images elem={elem} key={idx}/>
               </div>
             )
           })}
